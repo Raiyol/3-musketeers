@@ -5,6 +5,9 @@ const ora = require('ora');
 
 const argv = process.argv.slice(2);
 
+/**
+ * Help
+ */
 function help () {
   console.log(
     [
@@ -20,6 +23,10 @@ function help () {
 
 const spinner = ora('Fetching exchange data..');
 
+/**
+ * 
+ * @param {Object} opts - Object with 3 variable, amout, from and to
+ */
 async function start (opts) {
   try {
     const {amount, from, to} = opts;

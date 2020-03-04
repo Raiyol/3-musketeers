@@ -6,7 +6,11 @@ const BLOCKCHAIN_URL = 'https://blockchain.info/ticker';
 const CURRENCY_BITCOIN = 'BTC';
 
 const isAnyBTC = (from, to) => [from, to].includes(CURRENCY_BITCOIN);
-
+/**
+ * Convert and print USD to BTC
+ * @param {Object} opts - Parameter to add
+ * @return Converted amount
+ */
 module.exports = async opts => {
   const {amount = 1, from = 'USD', to = CURRENCY_BITCOIN} = opts;
   const promises = [];
